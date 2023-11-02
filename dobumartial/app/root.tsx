@@ -59,6 +59,22 @@ import { type Theme, setTheme, getTheme } from './utils/theme.server.ts'
 import { makeTimings, time } from './utils/timing.server.ts'
 import { getToast } from './utils/toast.server.ts'
 import { useOptionalUser, useUser } from './utils/user.ts'
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from '#app/components/ui/tooltip.tsx'
+import {
+	NavigationMenu,
+	NavigationMenuContent,
+	NavigationMenuIndicator,
+	NavigationMenuItem,
+	NavigationMenuLink,
+	NavigationMenuList,
+	NavigationMenuTrigger,
+	NavigationMenuViewport,
+  } from '#app/components/ui/navigation-menu.tsx'
 
 export const links: LinksFunction = () => {
 	return [
@@ -244,11 +260,13 @@ function App() {
 		<Document nonce={nonce} theme={theme} env={data.ENV}>
 			<div className="flex h-screen flex-col justify-between">
 				<header className="container py-6">
+				
+				
 					<nav>
 						<div className="flex flex-wrap items-center justify-between gap-4 sm:flex-nowrap md:gap-8">
 							<Link to="/">
-								<div className="font-light">epic</div>
-								<div className="font-bold">notes</div>
+								<div className="font-light">Dobu Martial Arts</div>
+								<div className="font-bold">Timetable</div>
 							</Link>
 							<div className="ml-auto hidden max-w-sm flex-1 sm:block">
 								{searchBar}
@@ -265,6 +283,26 @@ function App() {
 							<div className="block w-full sm:hidden">{searchBar}</div>
 						</div>
 					</nav>
+					<div className="flex-2"><NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Classes Available</NavigationMenuTrigger>
+      
+    </NavigationMenuItem>
+	<NavigationMenuItem>
+      <NavigationMenuTrigger>Membership</NavigationMenuTrigger>
+    
+    </NavigationMenuItem>
+	<NavigationMenuItem>
+      <NavigationMenuTrigger>Timetable</NavigationMenuTrigger>
+     
+    </NavigationMenuItem>
+	<NavigationMenuItem>
+      <NavigationMenuTrigger>Arts We Teach</NavigationMenuTrigger>
+     
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu> </div>
 				</header>
 
 				<div className="flex-1">

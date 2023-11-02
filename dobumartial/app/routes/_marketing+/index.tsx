@@ -16,7 +16,6 @@ import {
 	NavigationMenuViewport,
   } from '#app/components/ui/navigation-menu.tsx'
 
-
 export const meta: MetaFunction = () => [{ title: 'DobuMartial Arts' }]
 export default function Index() {
 	return (
@@ -66,7 +65,7 @@ export default function Index() {
 				</div>
 
 				<div className="mx-auto mt-8 max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
-					<div className="flex flex-wrap justify-left gap-8 rounded-3xl bg-slate-100 py-4 dark:bg-slate-200">
+					<div className="flex flex-wrap justify-left gap-8 rounded-3xl bg-slate-100 py-4 dark:bg-slate-400">
 						This is the home page with info
 					</div>
 				</div>
