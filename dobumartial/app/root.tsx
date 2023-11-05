@@ -286,8 +286,10 @@ function App() {
 					<div className="flex-2"><NavigationMenu>
   <NavigationMenuList>
     <NavigationMenuItem>
-      <NavigationMenuTrigger>Classes Available</NavigationMenuTrigger>
-      
+	
+      <NavigationMenuTrigger>Classes Available
+	  <NavigationMenuLink> /login </NavigationMenuLink>
+</NavigationMenuTrigger>
     </NavigationMenuItem>
 	<NavigationMenuItem>
       <NavigationMenuTrigger>Membership</NavigationMenuTrigger>
